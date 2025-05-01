@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOPI TANGERANG - Produk</title>
+  <meta name="description" content="Menu kopi terbaik, cold brew Tangerang, kopi kekinian Tangerang" />
+  <meta name="keywords" content="menu kopi terbaik, cold brew Tangerang, kopi kekinian Tangerang" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">KOPI TANGERANG</div>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="produk.html" class="active">Produk</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Menu Kopi</h2>
+      <div>
+        <label for="category-filter">Filter Kategori:</label>
+        <select id="category-filter" onchange="filterMenu()">
+          <option value="all">Semua</option>
+          <option value="panas">Panas</option>
+          <option value="dingin">Dingin</option>
+          <option value="signature">Signature</option>
+        </select>
+      </div>
+
+      <div id="menu-list" class="product-preview" style="margin-top: 20px;">
+        <!-- Menu items will be dynamically inserted here -->
+      </div>
+    </section>
+  </main>
+
+  <div id="floating-cart" onclick="toggleCart()">🛒<span id="cart-count">0</span></div>
+  <div id="cart-popup">
+    <h3>Keranjang Kopi Anda</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="cart-total">Rp0</span></p>
+    <div class="delivery-option">
+      <label><input type="radio" name="delivery" value="Delivery" checked> Delivery</label>
+      <label><input type="radio" name="delivery" value="Takeaway"> Takeaway</label>
+    </div>
+    <div class="payment-option">
+      <label><input type="radio" name="payment" value="Cash" checked> Cash</label>
+      <label><input type="radio" name="payment" value="Transfer"> Transfer</label>
+      <label><input type="radio" name="payment" value="E-Wallet"> E-Wallet</label>
+    </div>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

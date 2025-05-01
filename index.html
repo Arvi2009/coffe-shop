@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KOPI TANGERANG - Beranda</title>
+  <meta name="description" content="Coffee shop Tangerang, kopi enak Tangerang, tempat ngopi cozy" />
+  <meta name="keywords" content="coffee shop Tangerang, kopi enak Tangerang, tempat ngopi cozy" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">KOPI TANGERANG</div>
+      <ul>
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Selamat Datang di KOPI TANGERANG</h1>
+      <p>Kopi lokal berkualitas, tempat ngopi cozy di Tangerang</p>
+      <button class="btn" onclick="location.href='produk.html'">Lihat Produk</button>
+    </section>
+
+    <section class="about container" id="about">
+      <h2 class="section-title">Tentang Kami</h2>
+      <p>KOPI TANGERANG adalah coffee shop yang berlokasi di Tangerang, Banten. Kami menyajikan kopi lokal berkualitas dengan suasana yang hangat dan cozy, cocok untuk bersantai dan berkumpul bersama teman.</p>
+    </section>
+
+    <section class="features container" id="features">
+      <h2 class="section-title">Keunggulan Kami</h2>
+      <div class="feature-item">Kopi Lokal Berkualitas</div>
+      <div class="feature-item">Tempat Cozy dan Nyaman</div>
+      <div class="feature-item">Barista Profesional</div>
+      <p class="features-description">Kami berkomitmen memberikan kualitas terbaik dengan suasana yang nyaman dan pelayanan profesional untuk pengalaman ngopi yang tak terlupakan.</p>
+    </section>
+
+    <section class="product-preview container" id="product-preview">
+    
+      <h2 class="section-title">Produk Unggulan</h2>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=400&q=80" alt="Espresso" />
+        <h3>Espresso</h3>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80" alt="Cold Brew" />
+        <h3>Cold Brew</h3>
+      </div>
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=400&q=80" alt="Signature Latte" />
+        <h3>Signature Latte</h3>
+      </div>
+      <p class="product-description">Nikmati cita rasa kopi terbaik kami yang disajikan dengan penuh kehangatan dan profesionalisme.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2024 KOPI TANGERANG. All rights reserved.
+  </footer>
+
+  <div id="floating-cart" onclick="toggleCart()">🛒<span id="cart-count">0</span></div>
+  <div id="cart-popup">
+    <h3>Keranjang Kopi Anda</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="cart-total">Rp0</span></p>
+    <div class="delivery-option">
+      <label><input type="radio" name="delivery" value="Delivery" checked> Delivery</label>
+      <label><input type="radio" name="delivery" value="Takeaway"> Takeaway</label>
+    </div>
+    <div class="payment-option">
+      <label><input type="radio" name="payment" value="Cash" checked> Cash</label>
+      <label><input type="radio" name="payment" value="Transfer"> Transfer</label>
+      <label><input type="radio" name="payment" value="E-Wallet"> E-Wallet</label>
+    </div>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
